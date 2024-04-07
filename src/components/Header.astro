@@ -1,4 +1,66 @@
 <header>
-    <img src="/public/favicon.ico">
+    <img src="/public/Cyborgnetical.png">
     <a>Cyborgnetical</a>
+    <nav>
+        <a>Home</a>
+        <a>Projects</a>
+    </nav>
 </header>
+
+<style>
+    img {
+        image-rendering: crisp-edges;
+    }
+
+    header{
+        display: flex;
+
+        background-color: black;
+        color: white;
+    }
+    nav{
+        background-color: grey;
+    }
+
+    nav a {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+        text-align: center;
+
+        background-color: darkblue;
+        color: white;
+        width: 100px;
+        height: 30px;
+    }
+    nav a::before{
+        content: "";
+        position: absolute;
+        top:0px;
+        left: 0px;
+
+        width: 0%;
+        height: 2px;
+        background-color: gold;
+
+        transition: ease-out 250ms width;
+    }
+    nav a::after{
+        content: "";
+        position: absolute;
+        bottom:0px;
+        right: 0px;
+
+        width: 0%;
+        height: 2px;
+        background-color: gold;
+
+        transition: ease-out 250ms width;
+    }
+    nav a:hover::before{
+        width: 50%;
+    }
+    nav a:hover::after{
+        width: 50%;
+    }
+</style>

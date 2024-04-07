@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Header from '../components/Header.astro';
 ---
 
 <!doctype html>
@@ -17,9 +18,10 @@ const { title } = Astro.props;
 		<title>Cyborgnetical - {title}</title>
 	</head>
 	<body>
+        <Header></Header>
 		<slot />
 	</body>
 </html>
 <style is:global>
-    
+
 </style>
