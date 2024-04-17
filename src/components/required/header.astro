@@ -1,0 +1,57 @@
+<header>
+    <img src="/favicon.ico">
+    <a href="/"><h1>Cyborgnetical</h1></a>
+    <nav>
+        <a>Home</a>
+        <a>Projects</a>
+        <a>Games</a>
+        <a>Resume</a>
+    </nav>
+</header>
+
+<style>
+    @font-face {
+    font-family: "Josefin Sans";
+    src: url("/fonts/Josefin Sans.ttf");
+    }
+
+
+
+    header{
+        position:sticky;
+        top:0px;
+        max-width:100vw;
+        width: 100vw;
+
+        display: grid;
+        grid-template-columns: 60px 14em 1fr;
+        column-gap: 2vw;
+        align-items: center;
+
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        box-sizing: border-box;
+        padding-inline:5vw;
+
+        height: 100px;
+        background: linear-gradient(25deg,darkblue,cyan)
+    }
+    header img{
+        image-rendering: crisp-edges;
+        height: 60px;
+    }
+    header a{
+        color:white;
+        text-decoration: none;
+    }
+    header nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly
+    }
+    h1,h2,h3,h4,h5,h6{
+        font-family: "Josefin Sans";
+        font-weight:600;
+    }
+</style>
