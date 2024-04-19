@@ -18,16 +18,23 @@ const {name} = Astro.props
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="82nDufUtL-pcbfSgvpM4EHQ1w9EpEVvbsf__juWUyzk" />
         <title>Cyborgnetical | {name}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
     <body style="margin:0px; padding:0px; background-color:rgb(65, 65, 65);">
         <Header></Header>
         <slot></slot>
-        <style is:global>
+        <style is:global> 
+        @font-face {
+            font-family: "Open Sans";
+            src: url("/fonts/Open Sans.ttf");
+        }
             body,html,body *{
                 margin:0px;
                 padding:0px;
                 color:white;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+                font-family: "Open Sans";
             }
             h1,h2,h3,h4,h5,h6{
                 font-family: "Josefin Sans";

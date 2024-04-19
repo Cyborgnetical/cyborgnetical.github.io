@@ -1,13 +1,17 @@
 <header>
-    <img src="/favicon.ico">
-    <a href="/"><h1>Cyborgnetical</h1></a>
+    
+    <a href="/">
+        <img src="/favicon.ico">
+        <div>
+            <h1>Cyborgnetical</h1><hr><span>High School Hobbist</span>
+        </div>
+    </a>
     <nav>
-        <a>Home</a>
-        <a>Projects</a>
-        <a>Games</a>
-        <a>Resume</a>
+        <a class="header-interalLinks" href="/">Home</a>
+        <a class="header-interalLinks" href="/projects">Projects</a>
     </nav>
 </header>
+
 
 <style>
     @font-face {
@@ -24,12 +28,9 @@
         width: 100vw;
 
         display: grid;
-        grid-template-columns: 60px 14em 1fr;
+        grid-template-columns: auto 1fr;
         column-gap: 2vw;
         align-items: center;
-
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
 
         box-sizing: border-box;
         padding-inline:5vw;
@@ -41,7 +42,9 @@
         image-rendering: crisp-edges;
         height: 60px;
     }
-    header a{
+    header > a{
+        display: flex;
+        column-gap: 1vw;
         color:white;
         text-decoration: none;
     }
@@ -50,8 +53,42 @@
         align-items: center;
         justify-content: space-evenly
     }
+    header > nav > a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 5em;
+        padding-inline: 1em;
+        height: 30px;
+    }
+    header > nav > a::before, header > nav > a::after{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 3px;
+        background-color: white;
+        transition: 200ms;
+    }
+    header > nav > a::before{
+        top:0px;
+        left:0px;
+    }
+    header > nav > a::after{
+        bottom:0px;
+        right:0px;
+    }
+    header > nav > a:hover::before{
+        top:0px;
+        left:-20px;
+    }
+    header > nav > a:hover::after{
+        bottom:0px;
+        right:-20px;
+    }
     h1,h2,h3,h4,h5,h6{
         font-family: "Josefin Sans";
         font-weight:600;
+        margin: none;
     }
 </style>
