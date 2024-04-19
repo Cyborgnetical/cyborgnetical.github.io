@@ -12,6 +12,9 @@ import Top from "../components/Top.astro"
 			</span>
 		</div>
 		<img src="/backwards facing.png" id="looking-forward">
+		<div id="stars">
+
+		</div>
 	</Top>
 	<div>
 		<h1>About me</h1>
@@ -27,7 +30,24 @@ import Top from "../components/Top.astro"
 	</div>
 
 </GlobalLayout>
-
+<script>
+	for(let i = 0;i<15;i++){
+		let star = document.createElement("img")
+		star.src = "/Star.png"
+		star.className = "star"
+		star.style.left = `${Math.random()*100}%`
+		star.style.top = `${Math.random()*100}%`
+		
+		document.getElementById("stars")?.appendChild(star)
+	}
+</script>
+<style is:global>
+	.star{
+		position: absolute;
+		image-rendering: crisp-edges;
+		width: 30px;
+	}
+</style>
 <style>
 	#background-img{
 		position: absolute;
@@ -42,5 +62,12 @@ import Top from "../components/Top.astro"
 		right: 5vw;
 		width: 25vw;
 		image-rendering: crisp-edges;
+	}
+	#stars{
+		position: absolute;
+		top:0px;
+		left: 0px;
+		width: 100vw;
+		height: 600px;
 	}
 </style>
