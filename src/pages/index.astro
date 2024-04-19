@@ -11,12 +11,36 @@ import Top from "../components/Top.astro"
 				Web developer. learning backend, expanding in front end  <br>
 			</span>
 		</div>
+		<img src="/backwards facing.png" id="looking-forward">
 	</Top>
 	<div>
 		<h1>About me</h1>
 		<span>
-			I make websites in my free time
+			<h2>Story</h2>
+			I started learning about web development during quarentine because I was bored. 
+			I became good at it and made a game but never got that far, once school resumed and I got homework I quit for a while.
+			Then one of my teachers said that they needed a website so I took the job, and with a lot of help from my freinds I made a good website.
+			Fast foward, a month and now this snowballed into my life now, I get to to what I like and what I am good at, with a good reason.
+			One day I would like to become an Aerospace enginner and make my own models, experimenting with designs and watching my creations go.
 		</span>
+
 	</div>
 
 </GlobalLayout>
+
+<style>
+	#background-img{
+		position: absolute;
+		top:0px;
+		left: 0px;
+		width: 100vw;
+		z-index: -1;
+	}
+	#looking-forward{
+		position: absolute;
+		bottom: 0px;
+		right: 5vw;
+		width: 25vw;
+		image-rendering: crisp-edges;
+	}
+</style>
