@@ -1,0 +1,38 @@
+---
+    import GlobalLayout from "../../layouts/GlobalLayout.astro";
+    import Card from "../card/card.svelte";
+    // math shenaigans to get a randomish but predictable number
+    let angle = 45;
+    let numbers = [18,356,338,67,318,5,294,201,352]; // used random numbers
+    let getN = 0;
+    function getNumber(){
+        getN++
+        if(getN>=numbers.length-1){
+            getN=0
+        }
+        if(angle + numbers[getN]!>360){
+            angle+=numbers[getN]!-360
+        }
+        return angle ;
+    }
+---
+<GlobalLayout name="projects">
+    <div id="projects">
+        <Card title="Parlier NJROTC Website" colors="rgb(0, 0, 80),navy,#6F4E37, gold,gold" angle={15} link="https://parlier-njrotc.github.io/">
+            This website was made with the help of people from the unit. It has information about the unit, a gallery, and knowledge needed. 
+        </Card>
+        <Card title="Parlier Welding Website" colors="orange,red" angle={getNumber()} link="https://cyborgnetical.github.io/Parlier-Welding-Website/">
+            A work in progress website for my welding class website.
+        </Card>
+    </div>
+</GlobalLayout>
+<style>
+    #projects{
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding: 24px;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+</style>
