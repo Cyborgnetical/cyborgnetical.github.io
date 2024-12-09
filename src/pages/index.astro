@@ -1,73 +1,166 @@
 ---
-import GlobalLayout from "../layouts/GlobalLayout.astro"
-import Top from "../components/Top.astro"
+    import "../common/common.css"
 ---
 
-<GlobalLayout name="Home">
-	<Top>
-		<div>
-			<h1 style="font-size: 48px;">Hello im, Cyborngetical!</h1>
-			<span>
-				Web developer. learning backend, expanding in front end  <br>
-			</span>
-		</div>
-		<img src="/backwards facing.png" id="looking-forward">
-		<div id="stars">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyborgnetical | Home</title>
+</head>
+<body>
+    <header>
+        <h1 id="Web-title">Cyborgnetical</h1>
+        <h2 id="Web-subtitle">High School Hobbyist</h2>
 
-		</div>
-	</Top>
-	<div>
-		<h1>About me</h1>
-		<span>
-			<h2>Story</h2>
-			I started learning about web development during quarentine because I was bored. 
-			I became good at it and made a game but never got that far, once school resumed and I got homework I quit for a while.
-			Then one of my teachers said that they needed a website so I took the job, and with a lot of help from my freinds I made a good website.
-			Fast foward, a month and now this snowballed into my life now, I get to to what I like and what I am good at, with a good reason.
-			One day I would like to become an Aerospace enginner and make my own models, experimenting with designs and watching my creations go.
-		</span>
-<h1>im getting back into my game this weekend, im almost done with my classes </h1>
-	</div>
+        <h3 id="Web-links-title">Links</h3>
+        <nav id="Web-links">
+            <a href="/projects">Projects <img class="Present-Icon" src="/icons/project-svgrepo-com.svg"> </a>
+            <a href="https://www.youtube.com/@Cyborgnetical">Youtube <img class="Present-Icon" src="/icons/youtube-svgrepo-com.svg"></a>
+            <a href="https://github.com/Cyborgnetical">Github <img class="Present-Icon" src="/icons/github-142-svgrepo-com.svg"></a>
+            <a href="https://gitlab.com/Cyborgnetical">Gitlab <img class="Present-Icon" src="/icons/gitlab-svgrepo-com.svg"></a>
+        </nav>
+        <span id="Web-scroll-down">Scroll Down for more info</span>
+        <span id="Web-down-arrow">	&darr; </span>
+    </header>
+    <br>
+    <div id="Numbers-Display">
+        <h2 id="Numbers-Title">Numbers:</h2>
+        <div id="Numbers-Stuff">
+            <span>Status:<br>Lazy</span>
+            <span>Years of Programming:<br>1</span>
+            <span>Current Projects:<br>3</span>
+            <span>Commits on Github:<br>460</span>
+            <span>Successful Projects:<br>-2</span>
+            <span>Hours of Sleep:<br>4</span>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="Profile-Display">
+        <h2 id="Profile-Title">Profile</h2>
+        <div id="Profile-Stuff">
+            <img alt="image of me goes here">
+            <div id="Profile-Desc"><h3>Jose Ibarra-Martinez</h3><h4>Sophmore - Parlier High School</h4><h4>Class of 2027</h4></div>
+            <div id="Profile-Txt">Hello, im jose. This website is for school. I currently am part of <a href="https://parlier-njrotc.github.io/">NJROTC</a> and the cyberpatriot team of the unit (somewhat atlest)</div>
+        </div>
+    </div>
+    <style>
+        .Present-Icon{
+            width: 25px;
+        }
+        body,html *{
+            margin:0;
+            color: white;
+        }
+        header{
+            margin:0;
+            padding:0;
 
-</GlobalLayout>
-<script>
-	for(let i = 0;i<15;i++){
-		let star = document.createElement("img")
-		star.src = "/Star.png"
-		star.className = "star"
-		star.style.left = `${Math.random()*100}%`
-		star.style.top = `${Math.random()*100}%`
-		
-		document.getElementById("stars")?.appendChild(star)
-	}
-</script>
-<style is:global>
-	.star{
-		position: absolute;
-		image-rendering:pixelated;
-		width: 30px;
-	}
-</style>
-<style>
-	#background-img{
-		position: absolute;
-		top:0px;
-		left: 0px;
-		width: 100vw;
-		z-index: -1;
-	}
-	#looking-forward{
-		position: absolute;
-		bottom: 0px;
-		right: 5vw;
-		width: 25vw;
-		image-rendering: pixelated;
-	}
-	#stars{
-		position: absolute;
-		top:0px;
-		left: 0px;
-		width: 100vw;
-		height: 600px;
-	}
-</style>
+            height: 100vh;
+
+            display: grid;
+            grid-template-areas: 
+            "a q c"
+            "a w c"
+            "a e c"
+            "a r c"
+            "a t c"
+            "a y c"
+            ;
+            
+            grid-template-rows: 
+            1fr
+            0.5fr
+            3fr
+            2fr
+            1fr
+            0.5fr
+            ;
+            align-items: center;
+            justify-content: center;
+
+
+            background: linear-gradient(black,rgb(5, 5, 59),rgb(5, 5, 59),rgb(5, 5, 59), rgb(83, 10, 83));
+            background-repeat: no-repeat;
+        }
+        #Web-title{
+            grid-area:e;
+            text-align: left;
+            align-self: self-end;
+        }
+        #Web-subtitle{
+            grid-area:r;
+            border-top: 1px solid white;
+            text-align: left;
+            align-self: self-start;
+            padding-top: 10px;
+        }
+        #Web-links-title{
+            grid-area: q;
+            align-self: self-end;
+            
+        }
+        #Web-links{
+            grid-area: w;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: self-start;
+
+        }
+        #Web-scroll-down{
+            grid-area: t;
+            text-align: center;
+            align-self: self-end;
+        }
+        #Web-down-arrow{
+            grid-area: y;
+            text-align: center;
+            align-self: self-end;
+        }
+
+
+
+
+        #Numbers-Display{
+            display: grid;
+        }
+        #Numbers-Stuff{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2vw;
+        }
+        #Numbers-Stuff *{
+            text-align: center;
+        }
+
+        #Profile-Display{
+            display: grid;
+        }
+        #Profile-Title{
+            display: grid;
+        }
+        #Profile-Stuff{
+            display: grid;
+            grid-template-areas: 
+            "img dec"
+            "img txt"
+            ;
+            grid-template-columns: 1fr 1fr;
+        }
+        #Profile-Stuff img{
+            grid-area: img;
+        }
+        #Profile-Desc{
+            grid-area: dec;
+        }
+        #Profile-Txt{
+            grid-area: txt;
+        }
+    </style>
+</body>
+</html>
