@@ -3,12 +3,16 @@
     <a href="/">
         <img src="/favicon.ico">
         <div>
-            <h1>Cyborgnetical</h1><hr><span>High School Hobbist</span>
+            <h1 id="header-internalTitle">Cyborgnetical</h1><hr><span>High School Hobbist</span>
         </div>
     </a>
-    <nav>
+    <nav id="header-internalNav">
         <a class="header-interalLinks" href="/">Home</a>
         <a class="header-interalLinks" href="/projects">Projects</a>
+        <a class="header-interalLinks" href="/about me">About Me</a>
+        <a class="header-interalLinks" href="https://www.youtube.com/@Cyborgnetical">Youtube</a>
+        <a class="header-interalLinks" href="https://github.com/Cyborgnetical">Github</a>
+        <a class="header-interalLinks" href="https://gitlab.com/Cyborgnetical">Gitlab</a>
     </nav>
 </header>
 
@@ -55,6 +59,11 @@
         align-items: center;
         justify-content: space-evenly
     }
+    header nav{
+        background-color: #0056B2;
+        border-radius: 5px;
+        padding-block:5px;
+    }
     header > nav > a{
         display: flex;
         align-items: center;
@@ -63,34 +72,13 @@
         width: 5em;
         padding-inline: 1em;
         height: 30px;
+
+        font-size: 16px;
     }
-    header > nav > a::before, header > nav > a::after{
-        content: "";
-        position: absolute;
-        width: 50%;
-        height: 3px;
-        background-color: white;
-        transition: 200ms;
-    }
-    header > nav > a::before{
-        top:0px;
-        left:0px;
-    }
-    header > nav > a::after{
-        bottom:0px;
-        right:0px;
-    }
-    header > nav > a:hover::before{
-        top:0px;
-        left:-20px;
-    }
-    header > nav > a:hover::after{
-        bottom:0px;
-        right:-20px;
-    }
-    h1,h2,h3,h4,h5,h6{
+    #header-internalTitle{
         font-family: "Josefin Sans";
         font-weight:600;
         margin: none;
+        font-size: 40px;
     }
 </style>

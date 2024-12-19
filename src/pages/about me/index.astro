@@ -1,0 +1,43 @@
+---
+    import GlobalLayout from "../../layouts/GlobalLayout.astro"
+---
+
+<GlobalLayout name="About Me">
+    <div id="Profile-Display">
+        <h2 id="Profile-Title">Profile</h2>
+        <div id="Profile-Stuff">
+            <img alt="image of me goes here">
+            <div id="Profile-Desc"><h3>Jose Ibarra-Martinez</h3><h4>Sophmore - Parlier High School</h4><h4>Class of 2027</h4></div>
+            <div id="Profile-Txt">Hello, im jose. This website is for school. I currently am part of <a href="https://parlier-njrotc.github.io/">NJROTC</a> and the cyberpatriot team of the unit (somewhat atlest)</div>
+        </div>
+    </div>
+    <style>
+        #Profile-Display{
+            display: grid;
+
+            padding-block: 50px;
+            background-color: slategray;
+        }
+        #Profile-Title{
+            display: grid;
+        }
+        #Profile-Stuff{
+            display: grid;
+            grid-template-areas: 
+            "img dec"
+            "img txt"
+            ;
+            grid-template-columns: 1fr 1fr;
+        }
+        #Profile-Stuff img{
+            grid-area: img;
+        }
+        #Profile-Desc{
+            grid-area: dec;
+        }
+        #Profile-Txt{
+            grid-area: txt;
+        }
+    </style>
+
+</GlobalLayout>

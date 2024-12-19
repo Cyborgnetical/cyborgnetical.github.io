@@ -10,18 +10,20 @@
     <title>Cyborgnetical | Home</title>
 </head>
 <body>
+    <div class="notice">*Hello Mr. if you are here from avid the look at the <a href="/about me">About Me</a> page</div>
     <header>
         <h1 id="Web-title">Cyborgnetical</h1>
         <h2 id="Web-subtitle">High School Hobbyist</h2>
 
         <h3 id="Web-links-title">Links</h3>
         <nav id="Web-links">
-            <a href="/projects">Projects <img class="Present-Icon" src="/icons/project-svgrepo-com.svg"> </a>
-            <a href="https://www.youtube.com/@Cyborgnetical">Youtube <img class="Present-Icon" src="/icons/youtube-svgrepo-com.svg"></a>
-            <a href="https://github.com/Cyborgnetical">Github <img class="Present-Icon" src="/icons/github-142-svgrepo-com.svg"></a>
-            <a href="https://gitlab.com/Cyborgnetical">Gitlab <img class="Present-Icon" src="/icons/gitlab-svgrepo-com.svg"></a>
+            <a href="/projects">Projects<br> <img class="Present-Icon" src="/icons/project-svgrepo-com.svg"> </a>
+            <a href="/about me">About Me<br> <img class="Present-Icon" src="https://www.svgrepo.com/show/247452/portfolio-suitcase.svg"> </a>
+            <a href="https://www.youtube.com/@Cyborgnetical">Youtube <br><img class="Present-Icon" src="/icons/youtube-svgrepo-com.svg"></a>
+            <a href="https://github.com/Cyborgnetical">Github <br><img class="Present-Icon" src="https://www.svgrepo.com/show/439171/github.svg"></a>
+            <a href="https://gitlab.com/Cyborgnetical">Gitlab <br><img class="Present-Icon" src="/icons/gitlab-svgrepo-com.svg"></a>
         </nav>
-        <span id="Web-scroll-down">Scroll Down for more info</span>
+        <span id="Web-scroll-down">(Adding more info soon)</span>
         <span id="Web-down-arrow">	&darr; </span>
     </header>
     <br>
@@ -48,6 +50,10 @@
         </div>
     </div>
     <style>
+        .notice{
+            position: absolute;
+            font-size: 10px;
+        }
         .Present-Icon{
             width: 25px;
         }
@@ -59,7 +65,7 @@
             margin:0;
             padding:0;
 
-            height: 100vh;
+            height: 95vh;
 
             display: grid;
             grid-template-areas: 
@@ -70,8 +76,8 @@
             "a t c"
             "a y c"
             ;
-            
-            grid-template-rows: 
+
+            grid-template-rows:
             1fr
             0.5fr
             3fr
@@ -97,11 +103,15 @@
             text-align: left;
             align-self: self-start;
             padding-top: 10px;
+
+            margin-top: 15px;
+
+            /* haha lol */
+            transform: rotate(3deg);
         }
         #Web-links-title{
             grid-area: q;
             align-self: self-end;
-            
         }
         #Web-links{
             grid-area: w;
@@ -109,6 +119,10 @@
             align-items: center;
             justify-content: center;
             align-self: self-start;
+
+            text-align: center;
+
+            gap:2vw;
 
         }
         #Web-scroll-down{
