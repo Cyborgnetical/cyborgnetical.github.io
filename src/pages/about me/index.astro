@@ -6,20 +6,83 @@
     <div id="Profile-Display">
         <h2 id="Profile-Title">Profile</h2>
         <div id="Profile-Stuff">
-            <img alt="image of me goes here">
+            <img id="PicOfMEEEEE" alt="image of me goes here" src="me.jpg">
             <div id="Profile-Desc"><h3>Jose Ibarra-Martinez</h3><h4>Sophmore - Parlier High School</h4><h4>Class of 2027</h4></div>
             <div id="Profile-Txt">Hello, im jose. This website is for school. I currently am part of <a href="https://parlier-njrotc.github.io/">NJROTC</a> and the cyberpatriot team of the unit (somewhat atlest)</div>
         </div>
     </div>
+    <div>
+        <h2>My Life</h2>
+        <div>
+            <div>
+                <h3>Family</h3>
+            </div>
+            <div>
+                <h3>Friends</h3>
+            </div>
+            <div>
+                <h3>Hobbies</h3>
+            </div>
+            <div>
+                <h3>Favorites</h3>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Dream Colleges</h2>
+        <h3>(By difficulty)</h3>
+        <div>
+            <h4>UC Merced</h4>
+        </div>
+        <div>
+            <h4>UC San Diego</h4>
+        </div>
+        <div>
+            <h4>UCLA</h4>
+        </div>
+    </div>
+    <div>
+        <h3>Inpirational Individual</h3>
+        <h4>[Person Name]</h4>
+        <h5>Why</h5>
+        <h5>How</h5>
+    </div>
+    <script>
+        (document.getElementById("PicOfMEEEEE")! as HTMLImageElement).src = `me${Math.ceil(Math.random()*2)}.jpeg`
+    </script>
     <style>
+        img{
+            width: 70%;
+
+            border-radius: 5px;
+
+            
+        }
         #Profile-Display{
             display: grid;
 
             padding-block: 50px;
             background-color: slategray;
+
+            border: 1px solid white;
+            border-radius: 10px;
+
+            margin: 10vmin;
+
+            padding-inline: 30px;
         }
         #Profile-Title{
             display: grid;
+
+            background-color: darkslategrey;
+
+            margin: auto;
+            margin-bottom: 50px;
+
+            padding:1vmin;
+            padding-inline: 20vmin;
+
+            border-radius: 5px;
         }
         #Profile-Stuff{
             display: grid;
@@ -28,6 +91,9 @@
             "img txt"
             ;
             grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+            justify-items: center;
         }
         #Profile-Stuff img{
             grid-area: img;
