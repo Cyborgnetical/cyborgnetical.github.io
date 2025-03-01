@@ -1,0 +1,48 @@
+---
+
+import '/src/styles/global.css';
+import './Footer.less';
+
+
+interface Props {
+    license:"Apache" | "MIT";
+}
+
+const { license } = Astro.props
+
+const licenseInfo = {
+    "Apache":[
+        "Apache License 2.0",
+        "https://www.apache.org/licenses/LICENSE-2.0"
+    ],
+    "MIT":[
+        "The MIT License",
+        "https://choosealicense.com/licenses/mit/"
+    ]
+}
+
+---
+
+
+<footer>
+    <div>
+        <h3>Cyborgnetical</h3>
+        <nav role="navigation">
+            <a href="https://www.youtube.com/@Cyborgnetical">Youtube</a>
+            <a href="https://github.com/Cyborgnetical">GitHub</a>
+            <a href="https://gitlab.com/Cyborgnetical">GitLab</a>
+
+        </nav>
+    </div>
+
+    <div>
+        <p>*All Code in this website is under <a href="https://choosealicense.com/licenses/mit/">The MIT license</a></p>
+        <p>*All text and image content <i><b>within this webpage</b></i> is under the <a href={licenseInfo[license][1]}>{licenseInfo[license][0]}</a> license</p>
+        <style>
+            a{
+                text-decoration: underline;
+                color:rgb(169, 233, 233);
+            }
+        </style>
+    </div>
+</footer> 

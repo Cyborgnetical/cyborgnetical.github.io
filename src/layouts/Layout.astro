@@ -1,0 +1,32 @@
+---
+
+import { ClientRouter } from 'astro:transitions';
+import Header from "./components/Header.astro"
+import Footer from "./components/Footer.astro"
+
+
+import '/src/styles/global.css';
+
+interface Props {
+    name:string;
+}
+
+const {name} = Astro.props
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="82nDufUtL-pcbfSgvpM4EHQ1w9EpEVvbsf__juWUyzk" />
+    <ClientRouter></ClientRouter>
+    <title>Cyborgnetical | {name}</title>
+</head>
+<body>
+    <Header></Header>
+    <main>
+        <slot></slot>
+    </main>
+    <Footer license='Apache'></Footer>
+</body>
+</html>

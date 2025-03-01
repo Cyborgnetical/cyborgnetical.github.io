@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
 
-import svelte from "@astrojs/svelte";
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  integrations: [mdx(), sitemap(), svelte()],
-  server: { host: true }
+  integrations: [],
+  server: { host: true },
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });
