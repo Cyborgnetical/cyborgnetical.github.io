@@ -35,6 +35,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+            
+      - name: Checkout notes repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.NOTES_REPO_TOKEN }}
+          repository: Cyborgnetical/PapyrusScriptum
+          path: notes-repo
+      
+      - name: Copy markdown files
+        run: |
+          mkdir -p src/content/notes/AP-World-History
+          cp -R PapyrusScriptum/AP\ World\ History/*.md src/content/notes/AP-World-History/
+          
       - name: Detect package manager
         id: detect-package-manager
         run: |
