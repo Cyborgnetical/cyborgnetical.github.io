@@ -46,7 +46,7 @@ jobs:
       - name: Copy markdown files
         run: |
           mkdir -p src/content/notes/AP-World-History
-          cp -R PapyrusScriptum/AP\ World\ History/*.md src/content/notes/AP-World-History/
+          cp -R notes-repo/AP\ World\ History/*.md src/content/notes/AP-World-History/
           
       - name: Detect package manager
         id: detect-package-manager
