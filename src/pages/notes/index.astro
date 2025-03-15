@@ -1,9 +1,150 @@
 ---
+console.log("execute")
     import Layout from "../../layouts/Layout.astro";
+
+    import { getCollection } from "astro:content";
+
+    const notes = (await getCollection("Notes")).sort(
+        (note1, note2) => note1.data.unit - note2.data.unit,
+    );
+
+    console.log(notes)
+    // example
+    /*
+    {
+        title:"AP World History",
+        units:{
+        "unit 1":[
+            "unit 1.1",
+            "unit 1.2",
+            "unit 1.3"
+        ]
+        "unit 2"
+        "unit 3"
+        "unit 4"
+        "unit 5"
+        "unit 6"
+        "unit 7"
+        "unit 8"
+        "unit 9"
+        },
+    }
+    
+    */
+    interface subject{
+        title:string,
+        units:Record<string,string[]>
+    }
+    // there must be a better way to repeat this but idk how
+    // wasted hours = 4
+    // lots of documentaion cuz I don't trust my self
+    const Notebook:subject[] = []
+    for(let i=0;i<notes.length;i++){
+        let nSubject:string = notes[i].id.split("/")[0]
+        let nUnit:string = notes[i].id.split("/")[1]
+        // incase notebook empty
+        if(Notebook.length==0){
+            Notebook.push({title:nSubject,units:{}})
+        }
+        // check notebook for subject
+        for(let o=0;o<Notebook.length;o++){
+            let note = notes[i].id.split("/")[2]
+            // exists, add unit to subject
+            // if not, then add subject, unit will be added on next loop
+            if(Notebook[o]){
+                if(!(Notebook[o].units[nUnit])){
+                    Notebook[o].units[nUnit] = []
+                }
+                Notebook[o].units[nUnit].push(note)
+            }else{
+                Notebook.push({title:nSubject,units:{}})
+
+            }
+        }
+    }
+
+    /*
+    for(let i=0;i<notes.length;i++){
+        let nSubject:string = notes[i].id.split("/")[0]
+        let nSubsection:string = notes[i].id.split("/")[1]
+        let nSubSectionPortion:string = notes[i].id.split("/")[2]
+
+        // if stack hell idc
+        // there must be a better way to repeat this but idk how
+
+        // wasted hours = 2
+        if(!(nSubject in Notebook)){
+            let subsection: Record<string,{}> = {}
+            Notebook[nSubject] = subsection;
+        }
+        if(!(nSubsection in Notebook[nSubject])){
+            let subsection:string[] = []
+            // @ts-ignore
+            Notebook[nSubject][nSubsection] = subsection;
+        }
+        //@ts-ignore
+        Notebook[nSubject][nSubsection].push(nSubSectionPortion)
+        console.log(notes[i].id.split("/")[2])
+        
+    }*/
+    console.log(Notebook[0])
+    /*
+    for(let i=0;i<Notebook.length;i++){
+        let subject:string = Notebook[i].id.split("/")[0]
+        if(!(subject in Subjects)){
+            // @ts-ignore
+            Subjects[subject as keyof {}] = subject;
+        }
+    }*/
 ---
 
 <Layout name="Notes">
     <h2>Notes Page</h2>
     <hr>
-    Working!
+    {notes.map((note)=>(
+        <a href={note.id}>PlaceHolder</a>
+    ))}
+    {
+        Notebook.map((subject,i)=>(
+            <div>
+                <h2>{subject.title}</h2>
+                {
+                    ()=>{
+                        for( let o in Notebook[i].units){
+                           
+                            return (
+                            <h3>{o}</h3>
+                            <ul> 
+                            {Notebook[i].units[o].map((unit)=>{
+                                return <a href={"/notes/"+subject.title+"/"+o+"/"+unit}>{unit}</a><br/>
+                            })} 
+                            </ul>
+                            )
+                            
+                        }
+                    }
+                }
+            </div>
+        ))
+    }
+    
+    <!-- SCREW THIS OPTIMIZAITON, pain in the end -->
+     <!-- 
+
+    {
+        
+        Subjects.map((subject)=>(
+            <div>
+                <h3>{subject}</h3>
+                <hr/>
+                <li>
+                    {Notebook.map((note)=>(
+                        <li><a href={`/notes/${note.id}`}>{note.data.title}</a></li>
+                    ))
+                    }
+                </li>
+            </div>
+        ))
+
+}-->
 </Layout>

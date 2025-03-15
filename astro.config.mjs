@@ -10,5 +10,16 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()]
+  },
+  collections: {
+    units: {
+      slug: ({data}) => {
+        // Preserve numbers and meaningful separators
+        return data.title.toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/\./g, '')
+          .replace(/---+/g, '-');
+      }
+    }
   }
 });
