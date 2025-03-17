@@ -17,5 +17,10 @@ export default defineConfig({
       // ...
       mermaid,
     ],
+  },
+  build: {
+    rollupOptions: {
+      external: ['mermaid']
+    }
   }
 });
