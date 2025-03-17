@@ -1,13 +1,15 @@
 ---
-console.log("execute")
+
     import Layout from "../../layouts/Layout.astro";
 
     import { getCollection } from "astro:content";
 
+    import { titleToUrl, UrltoReadableText } from "../../utils/functions"
+
     const notes = (await getCollection("Notes")).sort(
         (note1, note2) => note1.data.unit - note2.data.unit,
     );
-
+    const banana = "abc"
     console.log(notes)
     // example
     /*
@@ -41,14 +43,14 @@ console.log("execute")
     const Notebook:subject[] = []
     for(let i=0;i<notes.length;i++){
         let nSubject:string = notes[i].id.split("/")[0]
-        let nUnit:string = notes[i].id.split("/")[1]
+        let nUnit:string = notes[i].data.unitTitle
         // incase notebook empty
         if(Notebook.length==0){
             Notebook.push({title:nSubject,units:{}})
         }
         // check notebook for subject
         for(let o=0;o<Notebook.length;o++){
-            let note = notes[i].id.split("/")[2]
+            let note = notes[i].data.title
             // exists, add unit to subject
             // if not, then add subject, unit will be added on next loop
             if(Notebook[o]){
@@ -101,22 +103,19 @@ console.log("execute")
 <Layout name="Notes">
     <h2>Notes Page</h2>
     <hr>
-    {notes.map((note)=>(
-        <a href={note.id}>PlaceHolder</a>
-    ))}
     {
         Notebook.map((subject,i)=>(
             <div>
-                <h2>{subject.title}</h2>
+                <h2>{UrltoReadableText(subject.title)}</h2>
                 {
                     ()=>{
                         for( let o in Notebook[i].units){
-                           
+                            
                             return (
                             <h3>{o}</h3>
                             <ul> 
                             {Notebook[i].units[o].map((unit)=>{
-                                return <a href={"/notes/"+subject.title+"/"+o+"/"+unit}>{unit}</a><br/>
+                                return <a href={"/notes/"+subject.title+"/"+titleToUrl(o)+"/"+titleToUrl(unit)}>{unit}</a><br/>
                             })} 
                             </ul>
                             )

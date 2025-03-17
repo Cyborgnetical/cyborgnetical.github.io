@@ -1,7 +1,7 @@
 ---
 
-import '/src/styles/global.css';
-import './Footer.less';
+
+
 
 
 interface Props {
@@ -23,7 +23,105 @@ const licenseInfo = {
 
 ---
 
+<style>
+    @import "tailwindcss";
 
+/* copied from parlier njrotc lmao*/
+
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("/fonts/Josefin Sans.ttf");
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/Open Sans.ttf");
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-VariableFont_wght.ttf");
+}
+:root{
+    --font-color:black;
+    --glow-color:rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --font-color:white;
+        --glow-color:rgb(0, 89, 255);
+    }
+    body{
+        background-color: #27282b;
+    }
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family:"Open Sans";
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color);
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    font-family: "Josefin Sans";
+    font-size: 4em;
+    text-shadow: var(--glow-color) 0px 0 15px;
+
+    text-align: center;
+}
+h2{
+    font-family:"Josefin Sans";
+    font-size: 3em;
+
+    text-align: center;
+
+}
+h3{
+    font-family:"Rubik";
+    font-size: 2em;
+    text-align: center;
+
+}
+
+h4{
+    font-family: "Josefin Sans";
+    font-size: 1em;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    text-align: center;
+
+}
+h5{
+    font-family: "Josefin Sans";
+    text-align: center;
+    font-size: 1em;
+}
+h6{
+    font-family: "Josefin Sans";
+    text-align: center;
+    font-size: 1em;
+}
+
+
+hr{
+    margin-inline: 5vw;
+}
+
+footer{
+    background-color: oklch(0.279 0.041 260.031);
+
+    display: grid;
+
+    
+}
+</style>
 <footer>
     <div>
         <h3>Cyborgnetical</h3>

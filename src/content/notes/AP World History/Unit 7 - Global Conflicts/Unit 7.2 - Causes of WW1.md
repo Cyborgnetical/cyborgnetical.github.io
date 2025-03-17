@@ -1,8 +1,9 @@
 ---
 title: Unit 7.2 - Causes of WW1
+unitTitle: Unit 7 - Global Conflicts
 description: When Europeans get to greedy
 creationDate: Feb 28, 2025
-pubDate: March 14, 2025
+pubDate: March 17, 2025
 unit: 7.2
 ---
 # M. A. I. N. Causes
@@ -28,4 +29,3 @@ Germany was allied to austra-hungary and ottoman empire because they hated UK, F
 
 
 
-[[Unit 7.3 - WW1]]

@@ -1,7 +1,10 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import NoteLayout from '../../layouts/NoteLayout.astro';
+import "./noteStyles.less"
+
 import { render } from 'astro:content';
+import { UrltoReadableText } from '../../utils/functions';
 
 export async function getStaticPaths() {
 	const Notes = await getCollection('Notes');
@@ -14,8 +17,54 @@ type Props = CollectionEntry<'Notes'>;
 
 const note = Astro.props;
 const { Content } = await render(note);
+
+
+const subject = (()=>{
+	return UrltoReadableText(note.id.split("-")[0])
+
+})()
 ---
 
-<Layout name="PlaceHolder">
-	<Content />
-</Layout>
+<NoteLayout subject={note.id} unit={note.data.unit}  name="PlaceHolder">
+	<style lang="less">
+		
+		article{
+			padding-inline: 4vw;
+			font-size: 14px;
+		}
+		#Artice-Info{
+			padding-bottom: 36px;
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			h1{
+				font-size: 3em;
+				padding-top: 25px;
+				padding-inline: 10px;
+				
+				&::before{
+					content: "| "
+				}
+			}
+			h2{
+				font-size: 2em;
+				padding-bottom: 25px;
+				padding-inline: 10px;
+			}
+		}
+		
+	</style>
+	<article>
+		<section id="Artice-Info">
+			<h1>{note.data.title}</h1>
+			<h2>"{note.data.description}"</h2>
+			<h3>Creation Date: <time datetime={note.data.creationDate.toString()}>{note.data.creationDate.toDateString()}</time></h3>
+			<h3>Publication Date: <time datetime={note.data.pubDate.toString()}>{note.data.pubDate.toDateString()}</time></h3>
+			<hr>
+		</section>
+		<section id="Main-Article">
+			<Content />
+		</section>
+	</article>
+</NoteLayout>

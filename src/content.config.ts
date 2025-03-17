@@ -9,7 +9,9 @@ const Notes = defineCollection({
     loader: glob({ base: "./src/content/notes", pattern: '**/*.{md,mdx}' }),
     schema: z.object({
         title: z.string(),
+        unitTitle:z.string(),
         description: z.string(),
+        creationDate: z.coerce.date(),
         pubDate: z.coerce.date(),
         updatedDate: z.coerce.date().optional(),
         unit: z.number()

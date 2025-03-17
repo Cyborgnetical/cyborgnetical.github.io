@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { mermaid } from "./src/plugins/mermaid";
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -11,15 +12,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  collections: {
-    units: {
-      slug: ({data}) => {
-        // Preserve numbers and meaningful separators
-        return data.title.toLowerCase()
-          .replace(/\s+/g, '-')
-          .replace(/\./g, '')
-          .replace(/---+/g, '-');
-      }
-    }
+  markdown: {
+    remarkPlugins: [
+      // ...
+      mermaid,
+    ],
   }
 });

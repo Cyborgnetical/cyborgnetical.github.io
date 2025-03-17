@@ -1,7 +1,120 @@
 ---
-    import '/src/styles/global.css';
-    import './Header.less';
+    
 ---
+
+<style lang="less">
+    @import "tailwindcss";
+
+/* copied from parlier njrotc lmao*/
+
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("/fonts/Josefin Sans.ttf");
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/Open Sans.ttf");
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-VariableFont_wght.ttf");
+}
+:root{
+    --font-color:black;
+    --glow-color:rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --font-color:white;
+        --glow-color:rgb(0, 89, 255);
+    }
+    body{
+        background-color: #27282b;
+    }
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family:"Open Sans";
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--font-color);
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    font-family: "Josefin Sans";
+    font-size: 4em;
+    text-shadow: var(--glow-color) 0px 0 15px;
+
+    text-align: center;
+}
+h2{
+    font-family:"Josefin Sans";
+    font-size: 3em;
+
+    text-align: center;
+
+}
+h3{
+    font-family:"Rubik";
+    font-size: 2em;
+    text-align: center;
+
+}
+
+h4{
+    font-family: "Josefin Sans";
+    font-size: 1em;
+    text-decoration: underline;
+    text-decoration-style:dotted;
+    text-align: center;
+
+}
+h5{
+    font-family: "Josefin Sans";
+    text-align: center;
+    font-size: 1em;
+}
+h6{
+    font-family: "Josefin Sans";
+    text-align: center;
+    font-size: 1em;
+}
+
+
+hr{
+    margin-inline: 5vw;
+}
+
+header {
+    padding-inline: 48px;
+    padding-block: 12px;
+    background: linear-gradient(25deg, #50d674, rgb(71, 120, 255));
+    div{
+        padding-inline:10px;
+        border-inline: 2px solid;
+    }
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        padding-inline: 10px;
+    }
+}
+
+s{
+    color:grey;
+}
+</style>
 
 <header class="flex justify-between">
     <div class="flex-none">
@@ -10,8 +123,8 @@
         <h4>High School Hobbyist</h4>
     </div>
     <nav>
-        <a>Home</a>
-        <a>Projects</a>
+        <a href="/">Home</a>
+        <s><a>Projects</a></s>
         <s><a>GitLabs</a> </s>
         <a href="/notes">School Notes</a>
         <s><a>Code Snippets</a></s>
