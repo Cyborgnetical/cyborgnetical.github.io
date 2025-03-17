@@ -39,13 +39,38 @@ New group, Young Turks rose up and overthrew the sultan. Created reforms:
 This pissed off other ethic groups and they rose up, breaking the Ottoman Empire
 
 # Collapse of the Russian Empire
+Failing and corrupt government
 
-The Russian Empire faced internal strife due to a growing middle class and working-class grievances at the turn of the century. The 1905 Revolution was brutally suppressed, but some reforms were introduced. However, ongoing issues and the pressures of WWI culminated in the successful Bolshevik Revolution of 1917, leading to the establishment of a communist state.
+- Ra Ra, Rasputin. Somehow making it into the royal family and messing with affairs
+- Tsar Nicholas II being an incompetent and brutal authoritarian ruler.
+- Brewing communist uprising promising peace, bread, prosperity and generally appeasing to common people
+- Eventual communist overthrow after fail reforms and great losses from ww1
 
 # Fall of the Qing Dynasty in China
+Didn't change at all
 
-China experienced significant turmoil and external aggression which led to the decline of the Qing Dynasty. The Tai Ping and Boxer Rebellions were responses to internal oppression and foreign interference. This culminated in a revolutionary movement that resulted in the abdication of the Qing Emperor, ending over 2000 years of imperial rule, and paving the way for a provisional government that ultimately led to a communist state.
+- Uses old practices
+- Refused to do refroms
+- Didn't use industry at all
+
+The Great powers had attempted to gain power in china to offset their trade deficit with them
+- first opium war to expand trade rights
+- second opium war to get people addicted
+All of these wars leading to Qing Dynasty slowly loosing control and people falling to starvation and drugs
+- multiple uprisings suppressed by help of imperial powers in order to keep trades
+- chaos after multiple rebellions
+This only leading the rise of the republic of china which later fell to the people's republic of china. Modern day China & Taiwan
 
 # Mexican Revolution
+Everyone in mexico angry at dictator Porfirio Diaz
 
-In Mexico, widespread dissatisfaction with the dictatorial rule of Porfirio Díaz sparked the Mexican Revolution. Francisco Madero's election led to his assassination and a decade of civil war, involving prominent leaders like Pancho Villa and Emiliano Zapata. The revolution concluded in 1917 with a new constitution enacting reforms like universal male suffrage and limiting the power of the Catholic Church, marking Mexico's emergence as a republic.
+- A revolution which attempted to from a democracy
+	- First president shot
+	- Another civil war
+		- Pancho Villa
+		- Emiliano Zapata
+- Ended with new party, the PRI
+	- Nationalized foreign industry
+	- Universal Suffering
+	- A constitution
+	- Limiting the church

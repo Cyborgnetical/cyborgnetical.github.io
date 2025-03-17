@@ -20,12 +20,22 @@ Germany/Prussia
 Germany had been known for having a strong military and expanding that military as it goes. Even before Germany united, Prussia was known for greatest military in defeating france.
 
 ## Alliance
-The entente (The Allies) / Central Power
+The Entente (The Allies) / Central Power
 
 Basically "The enemy of my enemy is my friend"
-Germany was allied to austra-hungary and ottoman empire because they hated UK, France, and Russia
+Each alliance viewed each other as a threat to their own power.
+Secretly signed incase of war
 
 ## Imperialism
+Grabbing
+
+All major empires had a huge industry that needed to support and constantly wanted to grow. The solution was to conquer more lands with resources. Although when there is no more place to expand, they will fight each other for land.
+
+## Nationalism
+My nation is the best, raaaaaaaaaaaaaaaaa 
+
+A group of people, usually ethnic gathering together to create a country for their people. Usually having immense pride and angering other groups. Would lead the way to fascism. 
 
 
-
+# The Spark
+Franz Ferdinand is assassinated in Austria Hungary while on a car to a conference by the black hand a Serbian Nationalist Group. Austria-Hungary Declares war on Serbia, Russia declares war, Germany Declares war, France declares and everything goes into domino effect.
