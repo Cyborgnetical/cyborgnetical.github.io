@@ -21,6 +21,12 @@ unit: 7.3
 - U-boats - Underwater boats AKA submarines
 - Battleships - Large boats filled with guns capable of bombing shores, expensive to operate
 
+# Total War
+- All portions of nation allocated to war.
+- Many factories dedicated to the mass production of guns and equipment
+- Large portions of civilian drafted with elaborate plan
+	- Once mobilization starts, it can't be stopped
+- Both civilian and military targets considered
 # Fronts
 
 ## Western Front
