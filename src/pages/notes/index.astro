@@ -9,7 +9,7 @@
     const notes = (await getCollection("Notes")).sort(
         (note1, note2) => note1.data.unit - note2.data.unit,
     );
-    const banana = "abc"
+    const banana = "abcBANANAR"
     console.log(notes)
     // example
     /*
@@ -89,7 +89,6 @@
         console.log(notes[i].id.split("/")[2])
         
     }*/
-    console.log(Notebook[0])
     /*
     for(let i=0;i<Notebook.length;i++){
         let subject:string = Notebook[i].id.split("/")[0]
@@ -98,6 +97,9 @@
             Subjects[subject as keyof {}] = subject;
         }
     }*/
+   console.log(Notebook)
+   console.log(banana)
+
 ---
 
 <Layout name="Notes">
@@ -109,8 +111,12 @@
                 <h2>{UrltoReadableText(subject.title)}</h2>
                 {
                     ()=>{
+                        // meet my work around
+                        let subjectArray:string[] = []
                         for( let o in Notebook[i].units){
-                            
+                            subjectArray.push(o)
+                            /*
+                            console.log("test")
                             return (
                             <h3>{o}</h3>
                             <ul> 
@@ -119,8 +125,18 @@
                             })} 
                             </ul>
                             )
-                            
+                            */
                         }
+                        return subjectArray.map((unit,j)=>{
+                            return (
+                            <h3>{unit}</h3>
+                            <ul> 
+                            {Notebook[i].units[unit].map((subUnit)=>{
+                                return <a href={"/notes/"+subject.title+"/"+titleToUrl(unit)+"/"+titleToUrl(subUnit)}>{subUnit}</a><br/>
+                            })} 
+                            </ul>
+                            )
+                        })
                     }
                 }
             </div>
