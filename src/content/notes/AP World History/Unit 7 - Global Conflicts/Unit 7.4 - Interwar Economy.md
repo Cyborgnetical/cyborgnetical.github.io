@@ -10,16 +10,16 @@ unit: 7.4
 
 ## Germany
 - Attempted to print lots of money to payback war debts
-- Failed and went into hyperinflation
+- Failed and went into ==hyperinflation==
 ## UK & France
-- Relied on Germany to payback its debts
+- ==Relied on Germany to payback its debts==
 - Economy suffered greatly as no longer war material was needed
 - Struggled to pay debts to USA
 - Colonial problems, not too major currently
 - ### Latin America
 	- Due to reliance on colonial powers & economic imperialism, once their economy began to fail so did theirs
 ## Russia / USSR
-- Had a communist Revolution
+- ==Had a communist Revolution==
 - Refused to pay debts
 - ### Industrialization & Modernization
 	- Mixed capitalist polices including free market in an attempt to build economy.
@@ -43,3 +43,7 @@ Every country aside from the USSR decided to rely on the US economy to build the
 - New Deal laws established in order to revitalize economy
 - Government Deficit
 - Ended during WW2 when production ramp up and consumed enough again.
+
+
+# Summary
+The government intervened in many economies due to economic depression or chaos.

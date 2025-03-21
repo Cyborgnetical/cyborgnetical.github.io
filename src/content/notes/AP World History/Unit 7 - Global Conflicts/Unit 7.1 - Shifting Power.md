@@ -22,6 +22,7 @@ graph LR;
 
 
 # Decline of the Ottoman Empire
+==Didn't change at all==
 
 Ottomans Attempted reforms via the Tanzimat Reforms. w/ help of Young Ottomans
 - Industry and Democracy
@@ -37,23 +38,24 @@ New group, Young Turks rose up and overthrew the sultan. Created reforms:
 
 
 This pissed off other ethic groups and they rose up, breaking the Ottoman Empire
+==Final nail was WW1 causing it to break apart due to not being ready for war==
 
 # Collapse of the Russian Empire
-Failing and corrupt government
+==Failing and corrupt government==
 
 - Ra Ra, Rasputin. Somehow making it into the royal family and messing with affairs
-- Tsar Nicholas II being an incompetent and brutal authoritarian ruler.
+- ==Tsar Nicholas II== being an incompetent and ==brutal authoritarian ruler.==
 - Brewing communist uprising promising peace, bread, prosperity and generally appeasing to common people
-- Eventual communist overthrow after fail reforms and great losses from ww1
+- Eventual communist overthrow after ==failed reforms and great losses from ww1==
 
 # Fall of the Qing Dynasty in China
-Didn't change at all
+==Didn't change at all==
 
 - Uses old practices
 - Refused to do refroms
 - Didn't use industry at all
 
-The Great powers had attempted to gain power in china to offset their trade deficit with them
+The ==Great powers had attempted to gain power in china== to offset their trade deficit with them
 - first opium war to expand trade rights
 - second opium war to get people addicted
 All of these wars leading to Qing Dynasty slowly loosing control and people falling to starvation and drugs
@@ -74,3 +76,6 @@ Everyone in mexico angry at dictator Porfirio Diaz
 	- Universal Suffering
 	- A constitution
 	- Limiting the church
+
+# Summary:
+So dictators in country tried to do reforms inside their state, they eventually failed because of conflicting ideas with liberalism. Their consequences were not being able to keep up with other nations and collapsing with too much preasure, namely war.
