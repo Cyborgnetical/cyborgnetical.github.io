@@ -2,132 +2,74 @@
     
 ---
 
+
 <style lang="less">
-    @import "tailwindcss";
+    header{
+        display:grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-items: center;
+        nav{
+            padding-inline: 20px;
+            padding-block:10px;
+            transition: 350ms;
+            a{
+                position: relative;
+                color:lightcyan;
+                padding-inline: 1vw;
+                transition: 350ms;
 
-/* copied from parlier njrotc lmao*/
+                text-decoration-thickness: 3px;
 
-
-@font-face {
-    font-family: "Josefin Sans";
-    src: url("/fonts/Josefin Sans.ttf");
-}
-@font-face {
-    font-family: "Open Sans";
-    src: url("/fonts/Open Sans.ttf");
-}
-@font-face {
-    font-family: "Rubik";
-    src: url("/fonts/Rubik-VariableFont_wght.ttf");
-}
-:root{
-    --font-color:black;
-    --glow-color:rgb(255, 255, 255);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root{
-        --font-color:white;
-        --glow-color:rgb(0, 89, 255);
+                &:visited{
+                    color:lightcyan;
+                }
+                &:hover{
+                    color:lightblue;
+                }
+            }
+        }
+        div{
+            place-self: center;
+            text-align: center;
+        }
+        
     }
-    body{
-        background-color: #27282b;
+
+
+    .border-strike::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px; /* Controls line thickness */
+        background-color: currentColor;
     }
-}
-
-html,body{
-    padding: 0;
-    margin: 0;
-    font-family:"Open Sans";
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--font-color);
-}
-*{
-    margin:0;
-    padding:0;
-}
-
-h1{
-    font-family: "Josefin Sans";
-    font-size: 4em;
-    text-shadow: var(--glow-color) 0px 0 15px;
-
-    text-align: center;
-}
-h2{
-    font-family:"Josefin Sans";
-    font-size: 3em;
-
-    text-align: center;
-
-}
-h3{
-    font-family:"Rubik";
-    font-size: 2em;
-    text-align: center;
-
-}
-
-h4{
-    font-family: "Josefin Sans";
-    font-size: 1em;
-    text-decoration: underline;
-    text-decoration-style:dotted;
-    text-align: center;
-
-}
-h5{
-    font-family: "Josefin Sans";
-    text-align: center;
-    font-size: 1em;
-}
-h6{
-    font-family: "Josefin Sans";
-    text-align: center;
-    font-size: 1em;
-}
-
-
-hr{
-    margin-inline: 5vw;
-}
-
-header {
-    padding-inline: 48px;
-    padding-block: 12px;
-    background: linear-gradient(25deg, #50d674, rgb(71, 120, 255));
-    div{
-        padding-inline:10px;
-        border-inline: 2px solid;
+    .border-strike::after{
+        content: "[Comming Soon]";
     }
-}
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    a{
-        padding-inline: 10px;
-    }
-}
-
-s{
-    color:grey;
-}
 </style>
 
-<header class="flex justify-between">
-    <div class="flex-none">
+<header>
+    <div>
         <h3>Cyborgnetical</h3>
         <hr>
         <h4>High School Hobbyist</h4>
     </div>
     <nav>
         <a href="/">Home</a>
-        <s><a>Projects</a></s>
-        <s><a>GitLabs</a> </s>
+        <a class="border-strike">Projects</a>
+        <a>GitLabs</a>
         <a href="/notes">School Notes</a>
         <s><a>Code Snippets</a></s>
     </nav>
 </header>
+
+
+<style>
+    nav{
+        border-bottom: 4px whitesmoke solid;
+    }
+</style>
 

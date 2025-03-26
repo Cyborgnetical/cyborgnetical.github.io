@@ -16,17 +16,17 @@ unit: 7.5
 		- Class C - Small Population, Under developed (Treated as colonies)
 		- Class B - Big Population, Under developed (Ruled by victorious powers, not colonies)
 		- Class A - Big Population, Properly developed (Suited for Independence
-	- In theory, supposed to slowly create self governed nations
-	- In practice, just led to colonies
+	- ==In theory, supposed to slowly create self governed nations==
+	- ==In practice, just led to colonies==
 
 # Expansion by other powers
 ## Japan
-- Successful industrialization from Meiji reforms.
+- ==Successful industrialization from Meiji reforms.==
 - Used to expand in Asia and created its own empire
 - Created puppet states, most notably Manchuko.
 	- Last ruler of Qing Dynasty installed as chief executive of state
 ## USSR
-- After Civil war the USSR sought to regain its lost lands
+- After Civil war the ==USSR sought to regain its lost lands==
 - Invaded neighbors during the interwar period
 	- Invaded the Baltic Countries (Estonia, Latvia, Lithuania) 
 	- Took over Belarus and Ukraine
@@ -53,3 +53,7 @@ unit: 7.5
 ## African National Congress
 - Created in South Africa by educated Africans
 - Wanted equal rights
+  
+  
+# Summary
+Everyone in the loosing side of WW1 was pissed. They resent many of the victorious power leading to WW2. The colonies of victorial powers had also demanded independence, of course they didn't grant it but it started to show cracks in their empire.

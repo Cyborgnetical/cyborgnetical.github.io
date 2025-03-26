@@ -22,7 +22,7 @@ unit: 7.3
 - Battleships - Large boats filled with guns capable of bombing shores, expensive to operate
 
 # Total War
-- All portions of nation allocated to war.
+- ==All portions of nation allocated to war.==
 - Many factories dedicated to the mass production of guns and equipment
 - Large portions of civilian drafted with elaborate plan
 	- Once mobilization starts, it can't be stopped
@@ -30,14 +30,14 @@ unit: 7.3
 # Fronts
 
 ## Western Front
-- More stalemates
+- ==More stalemates==
 - More technological advancements in an attempt to gain upper hand
 - Large casualties on both sides
 
 ## Eastern Front
-- Moving front
+- ==Moving front==
 - Central Powers having the advantage
-- Fall of Russian government
+- ==Fall of Russian government==
 
 # Alliances
 
@@ -59,3 +59,7 @@ unit: 7.3
 <a href="https://www.youtube.com/watch?v=JzuLHyY4Ir8">SABATON - Versailles</a>
 
 The treaty of Versailles placed heavy economic burden on the Central Powers making them pay back war reparations to the allied nations. Russia is in a civil war, The German Empire is turned into the weimar republic and forced to pay to france, Austria-Hungary collapses into multiple balkan states, the Ottoman Empire collapses and turns into modern day Turkey, the USA and UK basically leave, and Italy is left without what they were promised.
+
+
+# Summary
+So a huge blood bath. Everyone had been stuck in trenches with not escape. Each side used old tatitcs that normally work in usual battle, but not now. New technology was developed in response and chaos was let loose

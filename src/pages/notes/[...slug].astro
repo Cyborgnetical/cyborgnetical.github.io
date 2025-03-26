@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import NoteLayout from '../../layouts/NoteLayout.astro';
-import "./noteStyles.less"
+import "../../styles/notes.less"
 
 import { render } from 'astro:content';
 import { UrltoReadableText } from '../../utils/functions';
@@ -53,7 +53,6 @@ const subject = (()=>{
 				padding-inline: 10px;
 			}
 		}
-		
 	</style>
 	<article>
 		<section id="Artice-Info">
