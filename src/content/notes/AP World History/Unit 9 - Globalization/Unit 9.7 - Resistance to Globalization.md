@@ -1,3 +1,12 @@
+---
+title: Unit 9.7 - Resistance to Globalization
+unitTitle: Unit 9 - Globalization
+description: No thanks, I would rather be isolated
+creationDate: March 25, 2025
+pubDate: March 26, 2025
+unit: 9.7
+---
+
 # Economic Impact
 
 - Crazy growth

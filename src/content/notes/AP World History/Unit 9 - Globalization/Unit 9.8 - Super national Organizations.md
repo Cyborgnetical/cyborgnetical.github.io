@@ -1,3 +1,12 @@
+---
+title: Unit 9.8 - Supernational Organizations
+unitTitle: Unit 9 - Globalization
+description: And now the nations of the world brought to you bu yakko wonder.
+creationDate: March 25, 2025
+pubDate: March 26, 2025
+unit: 9.8
+---
+
 #  Explanation
  Organizations that operate everywhere on earth
 - Force Countries to work together

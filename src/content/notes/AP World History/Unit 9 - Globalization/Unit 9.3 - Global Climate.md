@@ -1,3 +1,12 @@
+---
+title: Unit 9.3 - Global Climate
+unitTitle: Unit 9 - Globalization
+description: So we are getting cooked
+creationDate: March 25, 2025
+pubDate: March 26, 2025
+unit: 9.3
+---
+
 What ever we leaned in elementary applies here
 
 # Climate Change & Issues

@@ -1,4 +1,16 @@
-### Definition of Globalization
+---
+title: Unit 9.1 - Technological Advancements
+unitTitle: Unit 9 - Globalization
+description: Now its everywhere
+creationDate: March 22, 2025
+pubDate: March 26, 2025
+unit: 9.1
+---
+
+
+
+
+# Definition of Globalization
 
 Globalization is described as the interconnectedness created by trade and technology, leading to social, political, and economic links worldwide. It has evolved significantly due to various technological advancements that have allowed for broader and more efficient connections.
 

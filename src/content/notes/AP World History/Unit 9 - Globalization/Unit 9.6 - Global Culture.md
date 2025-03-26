@@ -1,3 +1,13 @@
+---
+title: Unit 9.6 - Global Culture
+unitTitle: Unit 9 - Globalization
+description: Now I can speak
+creationDate: March 25, 2025
+pubDate: March 26, 2025
+unit: 9.6
+---
+
+
 ###  Globalized Culture Emergence
 So our culture is spearding:
 - Movies are going everywhere

@@ -1,3 +1,13 @@
+---
+title: Unit 9.5 - Reforms & Civil Rights
+unitTitle: Unit 9 - Globalization
+description: Now I can speak
+creationDate: March 25, 2025
+pubDate: March 26, 2025
+unit: 9.5
+---
+
+
 ###  Universal Declaration of Human Rights
 A big list of rights everyone should have
 1948, right after World War II

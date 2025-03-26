@@ -1,3 +1,12 @@
+---
+title: Unit 9.2 - Diseases
+unitTitle: Unit 9 - Globalization
+description: Cough Cough, I am sick
+creationDate: March 24, 2025
+pubDate: March 26, 2025
+unit: 9.2
+---
+
 # Intro
 Hey remember those advancements in unit 9.1, well they are back.
 

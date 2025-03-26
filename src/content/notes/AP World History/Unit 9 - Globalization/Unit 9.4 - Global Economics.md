@@ -1,3 +1,13 @@
+---
+title: Unit 9.4 - Global Economics
+unitTitle: Unit 9 - Globalization
+description: Here comes the moneyy
+creationDate: March 25, 2025
+pubDate: March 26, 2025
+unit: 9.4
+---
+
+
 # Neo liberalism
 Governments get their hands off the government
 Less spending now that war is over
