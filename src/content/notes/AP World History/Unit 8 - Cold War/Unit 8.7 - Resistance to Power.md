@@ -3,7 +3,7 @@ title: Unit 8.7 - Resistance to Power
 unitTitle: Unit 8 - Cold War
 description: Nuh uh, i'm non-aligned
 creationDate: March 14, 2025
-pubDate: March 17, 2025
+pubDate: April 1, 2025
 unit: 8.7
 ---
 
@@ -47,15 +47,3 @@ Why do we have this
 - So many groups seen terrorism as viable strategy
 - Governments around the world funding groups for political motives
 - Terrorist Attack on the USA intensified military presence in the middle east.
-### Nonviolent Resistance Examples
-
-The video highlights the importance of nonviolent resistance as a response to power structures after 1900, focusing on key figures like Mohandas Gandhi, who led movements against British rule in India through civil disobedience, Martin Luther King Jr., who utilized similar tactics in the American civil rights movement, and Nelson Mandela, who started with nonviolence but shifted to more militant approaches in the fight against apartheid in South Africa.
-
-### Gandhi's Civil Disobedience
-
-Mohandas Gandhi's methods included the Homespun movement and the Salt March, which directly challenged British economic control in India. His commitment to nonviolence led to significant political changes in India, ultimately contributing to its independence from British colonial rule.
-
-### Martin Luther King Jr.'s Influence
-
-Inspired by Gandhi, Martin Luther King Jr. led the American Civil Rights Movement using civil disobedience to combat racial segregation. The Montgomery Bus Boycott served as a pivotal event, resulting in landmark judicial changes like the outlawing of racial discrimination.
-

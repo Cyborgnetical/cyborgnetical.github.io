@@ -3,7 +3,7 @@ title: Unit 8.6 - State Building
 unitTitle: Unit 8 - Cold War
 description: New nations from decolonzation
 creationDate: March 14, 2025
-pubDate: March 17, 2025
+pubDate: April 1, 2025
 unit: 8.6
 ---
 # Creation of new States
@@ -50,8 +50,3 @@ No this is not chat-gpted, I just am not doing this at 3am.
 	- They still continued to do this even after indipendance
 	- Seen as a way to gain better opportunities at life
 	- Also lead to mix of many nationalities
-
-### Migration to Metropoles
-
-The video notes that decolonization led to significant migration patterns, where people from former colonies, like Indians and Algerians, moved to their former imperial metropoles seeking better economic opportunities. This migration reshaped the demographics and cultural landscapes of those metropoles, highlighting ongoing colonial connections.
-
