@@ -2,8 +2,224 @@
     import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout name="Home">
-    <h1>Rebuilindg...</h1>
-    <h2>Please Comeback Soon!</h2>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, vitae aperiam et facere quo in commodi aliquid quas, necessitatibus inventore perspiciatis labore saepe! Modi magni commodi quisquam fugiat labore ratione.
-</Layout>
+
+<div id="Elavator">
+    <div class="Elavator-Wall" id="Elavator-Wall1" style="grid-area: wallLeft;"></div>
+    <div class="Elavator-Lights" id="Elavator-Lights1" style="grid-area: borderLe;"></div>
+
+    <div id="Elavator-Door_Container" style="grid-area: doorMove;">
+        <div class="Elavator-Door" id="Elavator-Door1"></div>
+        <div class="Elavator-Door" id="Elavator-Door2"></div>
+    </div>
+
+    <div class="Elavator-Lights" id="Elavator-Lights2" style="grid-area: borderRi;"> </div>
+    <div class="Elavator-Wall" id="Elavator-Wall2" style="grid-area: wallrigh;"></div>
+
+
+
+
+    <div class="Elavator-Floor" id="Elavator-Floor1" style="grid-area: randomt1;"></div>
+    <div id="Elavator-Platform">
+    </div>
+    <div class="Elavator-Floor" id="Elavator-Floor2" style="grid-area: randomt2;"></div>
+</div>
+
+<main>
+   <div id="Main-Title">
+        <h1>Cyborgnetical</h1>
+        <h2>High School Hobbyist</h2>
+   </div>
+   <div id="Background">
+        <img id="Hub-Center" src="/assets/Hub-Center/pixil-layer-0.png">
+        <img id="Hub-Walkway" src="/assets/Hub-Center/Walkway.png">
+        <img id="Hub-Background" src="/assets/Hub-Center/Background.png">
+        <script is:inline>
+            let i = 0
+            setInterval(() => {
+                console.log("bet")
+                i++
+                if(i>=2){
+                    i=0
+                }
+                document.getElementById("Hub-Center").src = `/assets/Hub-Center/pixil-layer-${i}.png`
+            }, 500);
+        </script>
+   </div>
+</main>
+
+<style lang="less">
+    @font-face {
+        font-family: "Tomorrow";
+        src: url("/fonts/Tomorrow-Regular.ttf");
+    }
+    #Main-Title{
+        display: grid;
+
+        position: absolute;
+
+        width:100vw;
+        height:100vh;
+        *{
+            font-family: "Tomorrow";
+        }
+        h1{
+            font-size: 3em;
+            align-self: end;
+        }
+        h2{
+            font-size:2.5em;
+            text-decoration:double;
+            color:black;
+            text-decoration: underline;
+            text-decoration-style:double;
+        }
+
+        justify-content: center;
+        text-align: center;
+    }
+    #Background{
+        position: absolute;
+        z-index: -1;
+
+        width:100vw;
+        height:100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            image-rendering: pixelated;
+
+            width:25vmin;
+            height: 25vmin;
+        }
+        #Hub-Walkway{
+            position: absolute;
+            width:100vw;
+            height: 100vh;
+            z-index: -1;
+
+            top:10vmin;
+        }
+        #Hub-Background{
+            position: absolute;
+            width:100vmax;
+            height:100vmax;
+            z-index: -2;
+        }
+    }
+</style>
+
+<style lang="less">
+    body{
+        padding:0;
+        margin:0;
+
+        overflow-x: hidden;
+
+    }
+    #Elavator{
+        display: grid;
+        position: fixed;
+
+        z-index: 1;
+
+        grid-template-areas: 
+        "wallLeft borderLe doorMove borderRi wallrigh"
+        "randomt1 platform platform platform randomt2"
+        ;
+        grid-template-columns: 10vw 1vw 1fr 1vw 10vw;
+        grid-template-rows: 90vh 10vh;
+
+        align-items: center;
+        justify-content: center;;
+
+        width: 100vw;
+        height: 100vh;
+
+        transition:500ms;
+        *{
+            transition:500ms;
+            position: relative;
+
+            left:0px;
+            top:0px;
+        }
+        .Elavator-Wall{
+            background-color: #999687;
+            width:10vw;
+            height:90vh;
+
+            left:0px;
+            top:0px;
+        }
+    }
+    #Elavator-Door_Container{
+        display: flex;
+        z-index: -2;
+        .Elavator-Door{
+            background-color: #474c5d;
+            border: 5px solid black;
+            left:0px;
+
+
+            width: 50%;
+            height: 90vh;
+        }
+    }
+    .Elavator-Lights{
+        width: 1vw;
+        height: 90vh;
+        transition: 2000ms;
+
+        background: rgb(131, 174, 221);
+    }
+    .Elavator-Floor{
+        width: 20vw;
+        translate: -25% 0%;
+        height: 10vh;
+        z-index: -1;
+        background-color: rgb(197, 227, 255);
+    }
+    #Elavator-Platform{
+        background-color: rgb(54, 54, 54);
+
+        grid-area: platform;
+        width:100%;
+        height:100%;
+
+        border-radius: 100vmin;
+    }
+</style>
+
+<script is:inline>
+   window.onload = ()=>{
+    document.getElementById("Elavator-Door1").style.left = "-50vw"
+    document.getElementById("Elavator-Door2").style.left = "50vw"
+
+    setTimeout(() => {
+        document.getElementById("Elavator-Lights1").style.left = "-50vw"
+        document.getElementById("Elavator-Lights2").style.left = "50vw"
+
+        document.getElementById("Elavator-Wall1").style.left = "-50vw"
+        document.getElementById("Elavator-Wall2").style.left = "50vw"
+
+        document.getElementById("Elavator-Wall1").style.left = "-50vw"
+        document.getElementById("Elavator-Wall2").style.left = "50vw"
+
+        setTimeout(() => {
+            document.getElementById("Elavator-Floor1").style.top = "10vh"
+            document.getElementById("Elavator-Floor2").style.top = "10vh"
+
+            document.getElementById("Elavator-Platform").style.top = "10vh"
+
+            setTimeout(()=>{
+                document.getElementById("Elavator").remove()
+            },250)
+        }, 250);
+    }, 500);
+
+
+   }
+</script>
