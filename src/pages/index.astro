@@ -1,225 +1,174 @@
----
-    import Layout from "../layouts/Layout.astro"
----
-
-
-<div id="Elavator">
-    <div class="Elavator-Wall" id="Elavator-Wall1" style="grid-area: wallLeft;"></div>
-    <div class="Elavator-Lights" id="Elavator-Lights1" style="grid-area: borderLe;"></div>
-
-    <div id="Elavator-Door_Container" style="grid-area: doorMove;">
-        <div class="Elavator-Door" id="Elavator-Door1"></div>
-        <div class="Elavator-Door" id="Elavator-Door2"></div>
-    </div>
-
-    <div class="Elavator-Lights" id="Elavator-Lights2" style="grid-area: borderRi;"> </div>
-    <div class="Elavator-Wall" id="Elavator-Wall2" style="grid-area: wallrigh;"></div>
 
 
 
+<!doctype html>
+<html>
+    <head>
 
-    <div class="Elavator-Floor" id="Elavator-Floor1" style="grid-area: randomt1;"></div>
-    <div id="Elavator-Platform">
-    </div>
-    <div class="Elavator-Floor" id="Elavator-Floor2" style="grid-area: randomt2;"></div>
-</div>
+    </head>
+    <body>
+        <div id="Landing-Page">
+            <nav id="Orbital-Objects" style="z-index: 1;">
+                <div><img src="https://www.svgrepo.com/show/293823/engineering-wrench.svg"><a>About Me<br> (Coming Soon)</a> <!-- Make it a planet --></div>
+                <div><img src="https://www.svgrepo.com/show/241709/suitcase-portfolio.svg"><a>Work <br> (Coming Soon)</a> <!-- Make it a Space Station or moon --></div>
+                <a href="/notes"><div><img src="https://www.svgrepo.com/show/205852/bookshelf.svg"><p>Notes</p> <!-- Make it a floating book --></div></a>
+                <div><img src="https://www.svgrepo.com/show/407381/satellite.svg"><a><br> Contact <br> (Coming Soon)</a> <!-- Make it a sattelite --></div>
+            </nav>
+            <div id="" style="align-self:end;">
+                <h1>Cyborgnetical</h1>
+                <hr id="Landing-FunnyHR">
+                <h2 id="Landing-FunnyH2">High School Hobbyist</h2>
+            </div>
+            <div id="Stars" style="position: absolute; width:100vw; height:80vh; top:0px; overflow-x:hidden; overflow-y:visible;">
 
-<main>
-   <div id="Main-Title">
-        <h1>Cyborgnetical</h1>
-        <h2>High School Hobbyist</h2>
-   </div>
-   <div id="Background">
-        <img id="Hub-Center" src="/assets/Hub-Center/pixil-layer-0.png">
-        <img id="Hub-Walkway" src="/assets/Hub-Center/Walkway.png">
-        <img id="Hub-Background" src="/assets/Hub-Center/Background.png">
+            </div>
+        </div>
         <script is:inline>
-            let i = 0
-            setInterval(() => {
-                console.log("bet")
-                i++
+            let i = 0;
+            setInterval(()=>{
                 if(i>=2){
-                    i=0
+                    i=-1
                 }
-                document.getElementById("Hub-Center").src = `/assets/Hub-Center/pixil-layer-${i}.png`
-            }, 500);
+                i++
+                document.getElementById("Landing-FunnyHR").style.transform = `rotate(${i}deg)`
+                document.getElementById("Landing-FunnyH2").style.transform = `rotate(${(Math.random()*3)}deg)`
+                
+            },1000)
+
+            const StarContainer = document.getElementById("Stars")
+            let StarArray = []
+            for(let j=0;j<35;j++){
+                let star = document.createElement("img")
+                let base = Math.floor(Math.random()*3)
+                let scale = 3
+                switch(base){
+                    case 0:
+                        scale = 3*scale
+                    break;
+                    case 1:
+                        scale = 5*scale
+                    break;
+                    case 2:
+                        scale = 7*scale
+                    break;
+                }
+                
+                star.src = `/assets/stars/star${base}.png`
+                star.style.width = `${scale}px`
+                star.className = "star"
+
+                star.style.left = `${(Math.random()*100)}vw`
+                star.style.top = `${Math.random()*75}vh`
+
+                StarArray.push(star)
+                StarContainer.appendChild(star)
+            }
+            let timebefore = 0
+            let deltatime = 0
+
+
+            function render(){
+                deltatime = (performance.now() - timebefore)/1000
+                timebefore = performance.now()
+
+                let speed = (deltatime*2)
+                let measurement = window.innerWidth / 100
+                for(let j=0; j<StarArray.length;j++){
+                    StarArray[j].style.left = `${parseFloat(StarArray[j].style.left.split('vw')[0])-speed}vw`
+                    if(measurement*parseFloat(StarArray[j].style.left.split('vw')[0]) <= -25){
+                        StarArray[j].style.left = `${100-parseFloat(StarArray[j].style.left.split('vw')[0])}vw`
+                    }
+                }
+                console.log(measurement*parseFloat(StarArray[5].style.left.split('vw')[0]))
+                requestAnimationFrame(render)
+            }
+
+            requestAnimationFrame(render)
         </script>
-   </div>
-</main>
+        <style is:inline>
+            .star{
+                    position: absolute;
+                    image-rendering: pixelated;
+            }
+        </style>
+        <style lang="less">
+            @font-face {
+                font-family:"Tomorrow";
+                src: url("/fonts/Tomorrow-Regular.ttf");
+            }
+            @font-face {
+                font-family:"Rubik";
+                src: url("/fonts/Rubik-VariableFont_wght.ttf");
+            }
+            @font-face {
+                font-family:"Open Sans";
+                src: url("/fonts/Open Sans.ttf");
+            }
+            body{
+                padding:0px;
+                margin:0px;
 
-<style lang="less">
-    @font-face {
-        font-family: "Tomorrow";
-        src: url("/fonts/Tomorrow-Regular.ttf");
-    }
-    #Main-Title{
-        display: grid;
+                color:white;
 
-        position: absolute;
+                h1{
+                    margin:0;
+                    font-family: "Tomorrow";
+                    font-weight: 900;
 
-        width:100vw;
-        height:100vh;
-        *{
-            font-family: "Tomorrow";
-        }
-        h1{
-            font-size: 3em;
-            align-self: end;
-        }
-        h2{
-            font-size:2.5em;
-            text-decoration:double;
-            color:black;
-            text-decoration: underline;
-            text-decoration-style:double;
-        }
+                    font-size: 5em;
+                }
+                hr{
+                    transition: 2000ms;
+                }
+                h2{
+                    font-family: "Tomorrow";
+                    font-size: 4em;
+                    text-decoration: double;
+                    text-decoration-line:underline;
 
-        justify-content: center;
-        text-align: center;
-    }
-    #Background{
-        position: absolute;
-        z-index: -1;
+                    margin:0;
 
-        width:100vw;
-        height:100vh;
+                    transition: 2000ms;
+                }
+            }
+            #Landing-Page{
+                display:grid;
+                grid-template-rows: 20vh 40vh;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+                align-items: center;
+                justify-items: center;
 
-        img{
-            image-rendering: pixelated;
+                text-align: center;
+            }
+            nav{
+                width:50vw;
+                display:flex;
+                align-items: center;
+                justify-content: space-evenly;
+                font-family: "Rubik";
+                div{
+                    position: relative;
+                    img{
+                        height:25px;
+                    }
+                    a{
+                        display: grid;
 
-            width:25vmin;
-            height: 25vmin;
-        }
-        #Hub-Walkway{
-            position: absolute;
-            width:100vw;
-            height: 100vh;
-            z-index: -1;
+                        align-items: center;
+                        justify-content: center;
 
-            top:10vmin;
-        }
-        #Hub-Background{
-            position: absolute;
-            width:100vmax;
-            height:100vmax;
-            z-index: -2;
-        }
-    }
-</style>
+                        text-align: center;
+                    }
+                }
+            }
+            #Landing-Page{
+                width:100vw;
+                height:100vh;
 
-<style lang="less">
-    body{
-        padding:0;
-        margin:0;
+                background: linear-gradient( rgb(25, 1, 35) 75%,rgb(49, 6, 68), rgb(17, 27, 85), rgba(42, 123, 155, 1), rgba(237, 221, 83, 1) );
 
-        overflow-x: hidden;
-
-    }
-    #Elavator{
-        display: grid;
-        position: fixed;
-
-        z-index: 1;
-
-        grid-template-areas: 
-        "wallLeft borderLe doorMove borderRi wallrigh"
-        "randomt1 platform platform platform randomt2"
-        ;
-        grid-template-columns: 10vw 1vw 1fr 1vw 10vw;
-        grid-template-rows: 90vh 10vh;
-
-        align-items: center;
-        justify-content: center;;
-
-        width: 100vw;
-        height: 100vh;
-
-        transition:500ms;
-        *{
-            transition:500ms;
-            position: relative;
-
-            left:0px;
-            top:0px;
-        }
-        .Elavator-Wall{
-            background-color: #999687;
-            width:10vw;
-            height:90vh;
-
-            left:0px;
-            top:0px;
-        }
-    }
-    #Elavator-Door_Container{
-        display: flex;
-        z-index: -2;
-        .Elavator-Door{
-            background-color: #474c5d;
-            border: 5px solid black;
-            left:0px;
-
-
-            width: 50%;
-            height: 90vh;
-        }
-    }
-    .Elavator-Lights{
-        width: 1vw;
-        height: 90vh;
-        transition: 2000ms;
-
-        background: rgb(131, 174, 221);
-    }
-    .Elavator-Floor{
-        width: 20vw;
-        translate: -25% 0%;
-        height: 10vh;
-        z-index: -1;
-        background-color: rgb(197, 227, 255);
-    }
-    #Elavator-Platform{
-        background-color: rgb(54, 54, 54);
-
-        grid-area: platform;
-        width:100%;
-        height:100%;
-
-        border-radius: 100vmin;
-    }
-</style>
-
-<script is:inline>
-   window.onload = ()=>{
-    document.getElementById("Elavator-Door1").style.left = "-50vw"
-    document.getElementById("Elavator-Door2").style.left = "50vw"
-
-    setTimeout(() => {
-        document.getElementById("Elavator-Lights1").style.left = "-50vw"
-        document.getElementById("Elavator-Lights2").style.left = "50vw"
-
-        document.getElementById("Elavator-Wall1").style.left = "-50vw"
-        document.getElementById("Elavator-Wall2").style.left = "50vw"
-
-        document.getElementById("Elavator-Wall1").style.left = "-50vw"
-        document.getElementById("Elavator-Wall2").style.left = "50vw"
-
-        setTimeout(() => {
-            document.getElementById("Elavator-Floor1").style.top = "10vh"
-            document.getElementById("Elavator-Floor2").style.top = "10vh"
-
-            document.getElementById("Elavator-Platform").style.top = "10vh"
-
-            setTimeout(()=>{
-                document.getElementById("Elavator").remove()
-            },250)
-        }, 250);
-    }, 500);
-
-
-   }
-</script>
+                display: grid;
+            }
+        </style>
+    </body>
+</html>
