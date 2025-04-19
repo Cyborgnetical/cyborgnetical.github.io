@@ -1,17 +1,44 @@
+---
 
+
+import { ClientRouter } from "astro:transitions";
+
+import markdownIt from 'markdown-it';
+
+// Initialize markdown-it with proper encoding support
+const md = new markdownIt({
+  html: true,
+  breaks: true,
+  langPrefix: 'lang-',
+});
+
+// Fetch the content
+const response = await fetch('https://raw.githubusercontent.com/Cyborgnetical/Cyborgnetical/refs/heads/main/README.md');
+const content = await response.text();
+
+// Render the markdown
+const html = md.render(content);
+
+
+// Debug output - verify the rendered HTML
+console.log('Rendered HTML length:', html.length);
+console.log('First 50 chars of rendered HTML:', JSON.stringify(html.slice(0, 50)));
+---
 
 
 <!doctype html>
 <html>
     <head>
-
+        <title>Cyborgnetical | Home</title>
+        <meta charset="utf-8">
+        <ClientRouter></ClientRouter>
     </head>
     <body>
         <div id="Landing-Page">
             <nav id="Orbital-Objects" style="z-index: 1;">
-                <div><img src="https://www.svgrepo.com/show/293823/engineering-wrench.svg"><a>About Me<br> (Coming Soon)</a> <!-- Make it a planet --></div>
+                <div><img src="https://www.svgrepo.com/show/293823/engineering-wrench.svg"><a href="#about-me-desc">About Me</a> <!-- Make it a planet --></div>
                 <div><img src="https://www.svgrepo.com/show/241709/suitcase-portfolio.svg"><a>Work <br> (Coming Soon)</a> <!-- Make it a Space Station or moon --></div>
-                <a href="/notes"><div><img src="https://www.svgrepo.com/show/205852/bookshelf.svg"><p>Notes</p> <!-- Make it a floating book --></div></a>
+                <div><img src="https://www.svgrepo.com/show/205852/bookshelf.svg"><a href="/notes">Notes</a><!-- Make it a floating book --></div>
                 <div><img src="https://www.svgrepo.com/show/407381/satellite.svg"><a><br> Contact <br> (Coming Soon)</a> <!-- Make it a sattelite --></div>
             </nav>
             <div id="" style="align-self:end;">
@@ -23,7 +50,23 @@
 
             </div>
         </div>
-        <script is:inline>
+        <script is:inline data-astro-rerun=true>
+            // Add this script to your existing JavaScript code
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                }
+            });
+            });
             let i = 0;
             setInterval(()=>{
                 if(i>=2){
@@ -168,6 +211,47 @@
                 background: linear-gradient( rgb(25, 1, 35) 75%,rgb(49, 6, 68), rgb(17, 27, 85), rgba(42, 123, 155, 1), rgba(237, 221, 83, 1) );
 
                 display: grid;
+            }
+        </style>
+
+        <div id="about-me">
+            <article id="about-me-desc" style="z-index: 1;">
+                <h2>About Me</h2>
+                <Fragment set:html={html} />
+
+            </article>
+            <div id="about-me-background">
+                <img src="https://www.svgrepo.com/show/187784/earth-globe-global.svg">
+            </div>
+        </div>
+        <style lang="less">
+            #about-me{
+                height: 1000px;
+                position: relative;
+                background: linear-gradient( rgba(237, 221, 83, 1), rgb(255, 159, 49) );
+
+                display: grid;
+                align-items: center;
+                justify-content: center;
+
+                overflow-y: hidden;
+                
+            }
+            #about-me-background{
+                position: absolute;
+
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                overflow-y: hidden;
+
+                width:100vw;
+
+                img{
+                    position: relative;
+                    top:45%;
+                    width: 110vw;
+                }
             }
         </style>
     </body>
