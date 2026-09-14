@@ -1,0 +1,55 @@
+---
+import Default from "./default.astro";
+import NotesSidebar from "../components/NotesSidebar.astro";
+import { getCollection } from "astro:content";
+import { buildNotesTree } from "../lib/buildNotesTree";
+
+interface Props {
+	title: string;
+	activeSlug?: string;
+}
+
+const { title, activeSlug } = Astro.props;
+
+const notes = await getCollection("notes");
+const tree = buildNotesTree(notes);
+---
+
+<Default title={title}>
+	<div class="notes-layout">
+		<aside class="notes-layout__sidebar">
+			<p class="notes-layout__sidebar-title">Notes</p>
+			<NotesSidebar tree={tree} activeSlug={activeSlug} />
+		</aside>
+		<div class="notes-layout__content">
+			<slot />
+		</div>
+	</div>
+</Default>
+
+<style>
+	.notes-layout {
+		max-width: 60rem;
+		margin: 0 auto;
+		padding: 2rem 1.5rem 4rem;
+		display: grid;
+		grid-template-columns: 14rem 1fr;
+		gap: 3rem;
+	}
+
+	.notes-layout__sidebar-title {
+		margin: 0 0 1rem;
+		font-weight: 700;
+	}
+
+	.notes-layout__content {
+		min-width: 0;
+	}
+
+	@media (max-width: 48rem) {
+		.notes-layout {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+</style>

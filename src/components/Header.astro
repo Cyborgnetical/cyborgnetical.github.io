@@ -1,0 +1,65 @@
+---
+const nav = [
+	{ label: "Home", href: "/" },
+	{ label: "Notes", href: "/notes" },
+	{ label: "Blog", href: "/blog" },
+	{ label: "About", href: "/about" },
+];
+---
+
+<header class="site-header">
+	<div class="site-header__inner">
+		<a class="site-header__logo" href="/">Cyborgnetical</a>
+		<nav class="site-header__nav">
+			<ul>
+				{
+					nav.map((item) => (
+						<li>
+							<a href={item.href}>{item.label}</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.site-header {
+		border-bottom: 1px solid #e2e2e2;
+	}
+
+	.site-header__inner {
+		max-width: 60rem;
+		margin: 0 auto;
+		padding: 1.25rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.site-header__logo {
+		font-weight: 700;
+		font-size: 1.125rem;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.site-header__nav ul {
+		display: flex;
+		gap: 1.5rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.site-header__nav a {
+		color: inherit;
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+
+	.site-header__nav a:hover {
+		text-decoration: underline;
+	}
+</style>

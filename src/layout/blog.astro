@@ -1,0 +1,54 @@
+---
+import Default from "./default.astro";
+
+interface Props {
+	title: string;
+	date: Date;
+}
+
+const { title, date } = Astro.props;
+const formattedDate = date.toLocaleDateString("en-US", {
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+	timeZone: "UTC",
+});
+---
+
+<Default title={title}>
+	<article class="post">
+		<header class="post__header">
+			<p class="post__date">{formattedDate}</p>
+			<h1>{title}</h1>
+		</header>
+		<div class="post__content">
+			<slot />
+		</div>
+	</article>
+</Default>
+
+<style>
+	.post {
+		max-width: 42rem;
+		margin: 0 auto;
+		padding: 2rem 1.5rem 4rem;
+	}
+
+	.post__date {
+		margin: 0 0 0.5rem;
+		color: #555;
+		font-size: 0.875rem;
+	}
+
+	.post__header h1 {
+		margin: 0 0 1.5rem;
+	}
+
+	.post__content :global(pre) {
+		padding: 1rem;
+		border-radius: 0.375rem;
+		overflow-x: auto;
+		background: #0b0c10;
+		color: #f5f5f5;
+	}
+</style>

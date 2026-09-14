@@ -1,0 +1,48 @@
+---
+import NoteLayout from "../../layout/note.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+	const notes = await getCollection("notes");
+	return notes.map((note) => ({
+		params: { slug: note.id },
+		props: { note },
+	}));
+}
+
+const { note } = Astro.props;
+const { Content } = await render(note);
+---
+
+<NoteLayout title={note.data.title}>
+	<article class="note">
+		<h1>{note.data.title}</h1>
+		{note.data.description && <p class="note__description">{note.data.description}</p>}
+		<div class="note__content">
+			<Content />
+		</div>
+	</article>
+</NoteLayout>
+
+<style>
+	h1 {
+		margin-top: 0;
+	}
+
+	.note__description {
+		color: #555;
+		font-style: italic;
+	}
+
+	.note__content :global(h2) {
+		margin-top: 2rem;
+	}
+
+	.note__content :global(pre) {
+		padding: 1rem;
+		border-radius: 0.375rem;
+		overflow-x: auto;
+		background: #0b0c10;
+		color: #f5f5f5;
+	}
+</style>

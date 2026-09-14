@@ -1,0 +1,37 @@
+---
+import Default from "./default.astro";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Default title={title}>
+	<div class="note-page">
+		<a class="note-page__back" href="/notes/">&larr; Back to Notes</a>
+		<slot />
+	</div>
+</Default>
+
+<style>
+	.note-page {
+		max-width: 42rem;
+		margin: 0 auto;
+		padding: 2rem 1.5rem 4rem;
+	}
+
+	.note-page__back {
+		display: inline-block;
+		margin-bottom: 1.5rem;
+		color: inherit;
+		text-decoration: none;
+		font-size: 0.9rem;
+		color: #555;
+	}
+
+	.note-page__back:hover {
+		text-decoration: underline;
+	}
+</style>
